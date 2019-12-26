@@ -4,5 +4,3 @@
 def sum_of_2_nums(a,b):
     return a+b
     #print(a+b)
-
-
