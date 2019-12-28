@@ -17,3 +17,8 @@ Hard        - Level 3
 Very Hard   - Level 4
 
 Expert      - Level 5
+
+-----
+Note: 
+-----
+There are multiple ways/solutions to solve one problem. 
