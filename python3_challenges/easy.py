@@ -52,7 +52,7 @@ def equality_of_3_values(a,b,c):
 def isogram(input_string):
     pass
 
-# Return the List of Sublists
+#! Return the List of Sublists
 # Write a function that takes three arguments (x, y, z) and returns a list containing x sublists (e.g. [[], [], []]), each containing y number of item z.
 # x Number of sublists contained within the main list.
 # y Number of items contained within each sublist.
@@ -97,15 +97,50 @@ def isValidPIN(input_pin):
     else:
         return False
 
-#Total Volume
+#!Total Volume
 # Given a list of boxes, create a function that returns the total volume of all those boxes combined together. 
 # A box is represented by a list with three elements: length, width and height.
 # For instance, total_volume([2, 3, 2], [6, 6, 7], [1, 2, 1]) 
 # should return 266 since (2 x 3 x 2) + (6 x 6 x 7) + (1 x 2 x 1) = 12 + 252 + 2 = 266.
-def total_volume(lists):
-    test=1
+def total_volume(*lists):
+
+    def test(listss):
+        test=1
+        for i in listss:
+            test = test * i
+        return test
+
+    volume = 0
     for i in lists:
-        test = test * i
+        volume = volume + test(i)
     return volume
 
-print(total_volume([1,2,3]))
+
+#Calculate the Median
+def median(input_list):
+    from math import ceil
+    in_list=sorted(input_list)
+    list_length = len(in_list) 
+    middle = list_length/2
+    if list_length%2==0:
+        print(list_length%2)
+        return (in_list[int(middle)] + in_list[int(middle)-1])/2
+    else:
+        return (in_list[ceil(middle)])
+        
+
+#Positive Count / Negative Sum
+def post_count_and_negative_sum(input_list):
+    pos_count , negative_sum = 0 , 0
+    for i in input_list:
+        if i > 0:
+            pos_count = pos_count + 1
+        else:
+            negative_sum = negative_sum + i
+    return pos_count, negative_sum
+    
+#Remove Duplicates from a List
+def remove_dups(input_list):
+    return list(set(input_list))
+    
+
