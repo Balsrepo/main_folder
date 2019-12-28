@@ -1,4 +1,4 @@
-# Python Challenges from edabit.com/challenges/python3
+# Python Challenges from https://edabit.com/challenges/python3
 
 All levels are in seperate files and it will be updated periodically !
 
