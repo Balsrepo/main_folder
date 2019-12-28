@@ -1,4 +1,4 @@
-# Python Challenges from Edabit:  URL Link: https://edabit.com/challenges/python3
+# Python Challenges from Edabit -  URL Link: https://edabit.com/challenges/python3
 
 All levels are in seperate files and it will be updated periodically !
 
