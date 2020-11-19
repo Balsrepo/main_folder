@@ -87,6 +87,10 @@ def index_of_all_capital_letters(input_letters):
 
 
 #Count Letters in a Word Search
+def count_letters_in_word_search(input_list,word_to_count):
+    import itertools
+    return list(itertools.chain(*input_list)).count(word_to_count)
+    #or we can use loops to create a flat list from all sublists and get the count from flat list
 
 
 #ATM PIN Code Validation
@@ -95,7 +99,7 @@ def isValidPIN(input_pin):
     if length==4 or length==6 and input_pin.isdigit():
         return True
     else:
-        return False
+        return False #can be written in one line return statement
 
 #!Total Volume
 # Given a list of boxes, create a function that returns the total volume of all those boxes combined together. 
@@ -139,8 +143,38 @@ def post_count_and_negative_sum(input_list):
             negative_sum = negative_sum + i
     return pos_count, negative_sum
     
+
 #Remove Duplicates from a List
 def remove_dups(input_list):
-    return list(set(input_list))
-    
+    # return list(set(input_list)) #one line way to remove duplicates
+    for i in input_list:
+        if input_list.count(i) >= 2:
+            input_list.remove(i)
+    return input_list
 
+
+#Count the Arguments
+def count_arguments(*inps):
+    return len(inps)
+
+#Narcissistic Numbers
+def narcissistic_numbers(inp):
+    digits = str(inp)
+    temp = 0 
+    for i in digits:
+        temp = int(i)**len(digits) + temp  
+    return True if temp == inp else False
+
+#!First and Last Index
+# def first_last_index(inp_list,letter):
+#     try:
+#         return list(inp_list).index(letter)
+#     except ValueError:
+#         return None
+
+# print(first_last_index("hello","d"))
+
+
+#Sort Numbers in Descending Order
+def sort_descending(numbers):
+    pass
